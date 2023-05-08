@@ -1,0 +1,168 @@
+/* My UX Skills section coded using CSS flex */
+
+.inline-block {
+    display: inline-block;
+    vertical-align:top;
+}
+.logo{
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+nav {
+    width: 73%;
+    padding: 1%;
+}
+ul {
+    width: 50%;
+    margin-left: auto;
+}
+.heroImg {
+    padding: 25px;
+}
+.content {
+    width: 500px;
+    margin: 0 auto;
+}
+.content img {
+  width: 100%;
+}
+footer {
+    padding: 0 20px;
+}
+.footerNav {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px
+}
+
+.mySkills {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  
+  .flexContainer {
+    display: flex;
+  }
+  
+  .flexContainer div {
+    width: 33.33%;
+    margin: 10px;
+    padding: 20px;
+    border: black solid 1px;
+  }
+  
+  .flexContainer div img {
+    max-width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .flexContainer div h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .flexContainer div p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+ /* Step 5: Code the CSS Style for the “My Work” Section Using CSS Grid */
+
+/* Apply display: grid; to workGrid section */
+.workGrid {
+    display: grid;
+  }
+  
+  /* Set grid-template-rows and grid-template-columns */
+  .workGrid {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Define grid-template-areas */
+  .workGrid > div:nth-child(1) {
+    grid-area: img1;
+  }
+  
+  .workGrid > div:nth-child(2) {
+    grid-area: content1;
+  }
+  
+  .workGrid > div:nth-child(3) {
+    grid-area: img2;
+  }
+  
+  .workGrid > div:nth-child(4) {
+    grid-area: content2;
+  }
+  
+  /* Apply CSS styles to grid elements */
+  .workGrid > div {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .workGrid > div > img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .workGrid > div > h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .workGrid > div > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .workGrid > div > button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Create a comment above the section */
+  /* My Work Section Constructed using CSS Grid */
+
+  /* Mobile media query */
+@media only screen and (max-width: 600px) {
+    /* Set flex container to display as column */
+    .flexContainer {
+      flex-direction: column;
+    }
+    
+    /* Set flex children to take up 100% of container width */
+    .flexChild {
+      width: 100%;
+    }
+    
+    /* Rewrite grid-template-areas, grid-template-rows, and grid-template-columns for mobile */
+    .workGrid {
+      grid-template-areas:
+        "img1"
+        "title1"
+        "description1"
+        "button1"
+        "img2"
+        "title2"
+        "description2"
+        "button2";
+      grid-template-rows: repeat(8, auto);
+      grid-template-columns: 1fr;
+    }
+  }
